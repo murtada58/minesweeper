@@ -52,12 +52,18 @@ function init()
     {
         mousePos[0] = evt.clientY - canvas.getBoundingClientRect().top;
         mousePos[1] = evt.clientX - canvas.getBoundingClientRect().left;
+        //console.log([Math.floor((mousePos[0] - gridOffset[0]) / size), Math.floor((mousePos[1] - gridOffset[1]) / size)])
+
     });
     document.addEventListener("mousedown", function()
     {
         if (!mousedown)
         {
             clicked = [Math.floor((mousePos[0] - gridOffset[0]) / size), Math.floor((mousePos[1] - gridOffset[1]) / size)];
+            if (clicked[1] >= 37 && clicked[1] <= 39 && clicked[0] <= -1 && clicked[0] >= -2)
+            {
+                flag = !flag;
+            }
             if (clicked[0] >= 0 && clicked[0] < gridSize[0] && clicked[1] >= 0 && clicked[1] < gridSize[1])
             {
                 if (flag && !won && !gameOver)
