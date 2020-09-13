@@ -2,7 +2,7 @@ let canvas;
 let canvasContext;
 let gridOffset = [0, 0];
 let size = 30;
-let maxGridSize = 40;
+let maxGridSize = 20;
 let gridSize = [20, 40]
 let grid = [];
 let clickedGrid = []
