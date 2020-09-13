@@ -60,7 +60,7 @@ function init()
         if (!mousedown)
         {
             clicked = [Math.floor((mousePos[0] - gridOffset[0]) / size), Math.floor((mousePos[1] - gridOffset[1]) / size)];
-            if (clicked[1] >= 37 && clicked[1] <= 39 && clicked[0] <= -1 && clicked[0] >= -2)
+            if (clicked[1] >=  gridSize[1] - 3 && clicked[1] <= gridSize[1] - 1 && clicked[0] <= -1 && clicked[0] >= -2)
             {
                 flag = !flag;
             }
