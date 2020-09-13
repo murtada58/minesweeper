@@ -68,7 +68,7 @@ function init()
                         numberFlags++;
                         if (numberBombs == numberFlags && found + numberFlags == gridSize[0] * gridSize[1])
                         {
-                            console.log("won")
+                            //console.log("won")
                             won = true;
                             firstClick = true;
                             flag = false;
@@ -91,7 +91,7 @@ function init()
                         won = false;
                         found = 0;
                         makeGrid();
-                        console.log(grid)
+                        //console.log(grid)
                         for (let i = 0; i < gridSize[0]; i++)
                         {
                             for (let j = 0; j < gridSize[1]; j++)
@@ -110,7 +110,7 @@ function init()
                         gameOver = false;
                         found = 0;
                         makeGrid();
-                        console.log(grid)
+                        //console.log(grid)
                         for (let i = 0; i < gridSize[0]; i++)
                         {
                             for (let j = 0; j < gridSize[1]; j++)
@@ -137,14 +137,14 @@ function init()
                     }
                     if (grid[clicked[0]][clicked[1]] == -1)
                     {
-                        console.log("lost")
+                        //console.log("lost")
                         firstClick = true;
                         gameOver = true;
-                        console.log(grid)
+                        //console.log(grid)
                     }
                     if (numberBombs == numberFlags && found + numberFlags == gridSize[0] * gridSize[1])
                     {
-                        console.log("won")
+                        //console.log("won")
                         won = true;
                         firstClick = true;
                     }
@@ -423,7 +423,7 @@ function keyPressed(evt)
             if (!spaceKeyDown)
             {  
                 flag = !flag;
-                console.log(flag)
+                //console.log(flag)
                 spaceKeyDown = true;
             }
             break
