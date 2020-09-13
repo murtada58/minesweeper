@@ -55,7 +55,8 @@ function init()
         //console.log([Math.floor((mousePos[0] - gridOffset[0]) / size), Math.floor((mousePos[1] - gridOffset[1]) / size)])
 
     });
-    document.addEventListener("mousedown", function()
+    canvas.addEventListener('contextmenu', function(evt) {evt.preventDefault();});
+    document.addEventListener("mousedown", function(evt)
     {
         if (!mousedown)
         {
@@ -66,7 +67,7 @@ function init()
             }
             if (clicked[0] >= 0 && clicked[0] < gridSize[0] && clicked[1] >= 0 && clicked[1] < gridSize[1])
             {
-                if (flag && !won && !gameOver)
+                if ((evt.button == 2 || flag) && !won && !gameOver)
                 {
                     if (clickedGrid[clicked[0]][clicked[1]] == 0)
                     {
