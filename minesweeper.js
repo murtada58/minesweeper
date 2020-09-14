@@ -183,7 +183,7 @@ function draw(timeStamp)
     oldTimeStamp = timeStamp;
     fps = Math.round(1 / dTime);
     timer += dTime;
-    if (firstClick)
+    if (firstClick && !won && !gameOver)
     {
         timer = 0;
     }
